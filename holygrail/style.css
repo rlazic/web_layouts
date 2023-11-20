@@ -1,0 +1,31 @@
+.grid {
+    display: grid;
+    grid-template-rows: 80px auto 80px;
+    grid-template-columns: 20% auto 20%;
+    height: 100vh;
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-rows: 80px 80px auto 80px 80px;
+        grid-template-columns: 1fr;
+    }
+    aside,
+    main {
+        grid-column: 1 / 4;
+    }
+}
+
+header,
+footer {
+    background: #aaaa;
+    grid-column: 1 / 4;
+}
+
+aside {
+    background: #1322DE;  
+}
+
+main {
+    background: #08730D;
+}
